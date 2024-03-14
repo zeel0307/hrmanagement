@@ -1,0 +1,20 @@
+{% extends "../base.html" %}
+{% load static %}
+{% load crispy_forms_tags %} 
+{% block content %}
+<html>
+  <head>
+    <title>Document</title>
+    </head>
+<body>
+    <div>
+    <h1>{{celebrations.title}}</h1>
+    <h2>{{celebrations.description}}</h2>
+    <h3>{{celebrations.date}}</h3>
+    <h4>{{celebrations.time}}</h4>
+    <h5>{{celebrations.venue}}</h5>
+    </div>
+ </body>
+ </html>
+ 
+ {% endblock content %}

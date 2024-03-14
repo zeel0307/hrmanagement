@@ -1,0 +1,345 @@
+{% extends "../base.html" %}
+ {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
+                    <h5 class="font-weight-bolder">
+                      $53,000
+                    </h5>
+                    <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+55%</span>
+                      since yesterday
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
+                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
+                    <h5 class="font-weight-bolder">
+                      2,300
+                    </h5>
+                    <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+3%</span>
+                      since last week
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
+                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">New Clients</p>
+                    <h5 class="font-weight-bolder">
+                      +3,462
+                    </h5>
+                    <p class="mb-0">
+                      <span class="text-danger text-sm font-weight-bolder">-2%</span>
+                      since last quarter
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
+                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Sales</p>
+                    <h5 class="font-weight-bolder">
+                      $103,430
+                    </h5>
+                    <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-7 mb-lg-0 mb-4">
+          <div class="card z-index-2 h-100">
+            <div class="card-header pb-0 pt-3 bg-transparent">
+              <h6 class="text-capitalize">Employees</h6>
+              <p class="text-sm mb-0">
+                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                <span class="font-weight-bold">4% more</span> in 2021
+              </p>
+            </div>
+            <div class="card-body p-3">
+              <div class="chart">
+                <div class="table-responsive p-0">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">userid</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">dateofbirth</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">dateofjoining</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">department</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">address</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">emergencycontactno</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">lastappraisaldate</th>
+                        <th class="text-secondary opacity-7">ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for userdetail in userdetails %}
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1"> 
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">{{userdetail.userid}}</h6>
+                               <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> 
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs font-weight-bold mb-0">{{userdetail.dateofbirth}}</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class="badge badge-sm bg-gradient-success">{{userdetail.dateofjoining}}</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">{{userdetail.department}}</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">{{userdetail.address}}</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">{{userdetail.emergencycontactno}}</span>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">{{userdetail.lastappraisaldate}}</span>
+                        </td>
+                        <td class="align-middle">
+                          <a href="{% url 'update_userdetail' userdetail.id %}" class="btn btn-warning">
+                            UPDATE
+                          </a>
+                          <a href="{% url 'detail_userdetail' userdetail.id %}" class="btn btn-success">
+                              DETAIL
+                            </a>
+                            <a href="{% url 'delete_userdetail' userdetail.id %}" class="btn btn-danger">
+                              DELETE
+                            </a>
+                        </td>
+                      </tr>    
+                      {% endfor %}       
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-7 mb-lg-0 mb-4">
+        <div class="card z-index-2 h-100">
+          <div class="card-header pb-0 pt-3 bg-transparent">
+            <h6 class="text-capitalize">Celebrations</h6>
+            <p class="text-sm mb-0">
+              <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+              <span class="font-weight-bold">4% more</span> in 2021
+            </p>
+          </div>
+          <div class="card-body p-3">
+            <div class="chart">
+             
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">title</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">description</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">date</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">time</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">venue</th>
+                      <th class="text-secondary opacity-7">ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for celebration in celebrations %}
+              
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1"> 
+                          </div>
+                          
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">{{celebration.title}}</h6>
+                             <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> 
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{celebration.description}}</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge badge-sm bg-gradient-success">{{celebration.date}}</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">{{celebration.time}}</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">{{celebration.venue}}</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="{% url 'update_celebration' celebration.id %}" class="btn btn-warning">
+                          UPDATE
+                        </a>
+                        <a href="{% url 'detail_celebration' celebration.id %}" class="btn btn-success">
+                            DETAIL
+                          </a>
+                          <a href="{% url 'delete_celebration' celebration.id %}" class="btn btn-danger">
+                            DELETE
+                          </a>
+                      </td>
+                    </tr>    
+                    {% endfor %}       
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-lg-7 mb-lg-0 mb-4">
+      <div class="card z-index-2 h-100">
+        <div class="card-header pb-0 pt-3 bg-transparent">
+          <h6 class="text-capitalize">Leaves</h6>
+          <p class="text-sm mb-0">
+            <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+            <span class="font-weight-bold">4% more</span> in 2021
+          </p>
+        </div>
+        <div class="card-body p-3">
+          <div class="chart">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">leavetype</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">notes</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">dates</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">isapproved</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">reason</th>
+                    <th class="text-secondary opacity-7">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for leave in leaves %}
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1"> 
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">{{leave.leavetype}}</h6>
+                           <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">{{leave.notes}}</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-success">{{leave.dates}}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">{{leave.isapproved}}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">{{leave.reason}}</span>
+                    </td>
+                    <td class="align-middle">
+                        <a href="{% url 'update_leave' leave.id %}" class = "btn btn-warning">
+                          UPDATE
+                          </a>
+                        <a href="{% url 'detail_leave' leave.id %}" class = "btn btn-success">
+                          DETAIL
+                          </a>
+                      
+                        <a href="{% url 'delete_leave' leave.id %}" class = "btn btn-danger">
+                        DELETE
+                        </a>
+                      </td>
+                  </tr>    
+                  {% endfor %}       
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </body>
+</html>
+{% endblock content %}
