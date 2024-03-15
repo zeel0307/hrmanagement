@@ -12,5 +12,5 @@ urlpatterns = [
     path("developer-dashboard/",views.employeeDashboardView.as_view(),name="employee_dashboard"),
     path("logout/",LogoutView.as_view(next_page = "/user/login"),name="logout"),
     path("sendmail/",views.sendMail,name="sendmail"),
-    path("employee_dashboard/",views.employeeDashboardView.as_view(),name="employee_dashboard"),  
+    path("employee_dashboard/",views.employeeDashboardView.as_view(),name="employee_dashboard"), 
 ]
